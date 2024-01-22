@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  db-mysql:
+    image: mysql:5.7.40 # use the latest image.
+    restart: always
+    environment:
+      - MYSQL_DATABASE=student
+      - MYSQL_ROOT_PASSWORD=123456
+    ports:
+      - "3310:3306"
+    

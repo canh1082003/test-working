@@ -23,7 +23,7 @@ class adminService{
       }
       async deleteStudentId(studentId : number){
         const studentDelete = await Student.findOne({where: {studentId}});
-        if(!studentDelete){
+        if(!studentDelete){ 
           throw new Error('Student not found')
         }
         await studentDelete.remove();
